@@ -20,11 +20,13 @@ public class LoginPage {
 		eleutil = new  ElementUtil(driver);
 	}
 	
-	public void DoLogin(String un, String pwd) {
+	public Accountpage DoLogin(String un, String pwd) {
 		System.out.println("login with Usrename:"+un+"Password:"+pwd);
 		eleutil.doSendKeys(Email_id, un);
 		eleutil.doSendKeys(Password, pwd);
 		eleutil.doClick(LoginBtn);
+		return new Accountpage(driver);
+		
 	}
 
 }

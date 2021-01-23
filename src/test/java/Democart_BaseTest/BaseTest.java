@@ -24,7 +24,7 @@ public class BaseTest {
 		driver=df.init_driver(prop);
 		driver.get(prop.getProperty("url"));
 		logpage = new LoginPage(driver);
-		//accpage = new Accountpage(driver);
+		accpage = new Accountpage(driver);
 		
 		
 		
